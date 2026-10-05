@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wi-Fi Network Performance Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <div class="wifi-icon">📶</div>
+            <h1>Wi-Fi Network Performance Analyzer</h1>
+            <p>Monitor and analyze your Wi-Fi network performance</p>
+        </header>
+
+
+        <!-- Network Information -->
+        <section class="network-info">
+
+            <div class="info-box">
+                <span>Network Name</span>
+                <strong id="networkName">Campus_WiFi</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Connection</span>
+                <strong id="connectionStatus">Connected</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Frequency</span>
+                <strong>5 GHz</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Security</span>
+                <strong>WPA2</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Analyze Button -->
+
+        <div class="analyze-area">
+
+            <button id="analyzeBtn" onclick="analyzeNetwork()">
+                🔍 Start Network Analysis
+            </button>
+
+            <p id="analysisStatus">
+                Click the button to analyze your Wi-Fi network
+            </p>
+
+        </div>
+
+
+        <!-- Performance Cards -->
+
+        <section class="performance">
+
+            <div class="card">
+
+                <div class="card-icon">📶</div>
+
+                <h3>Signal Strength</h3>
+
+                <div class="value" id="signal">
+                    85%
+                </div>
+
+                <div class="progress">
+                    <div class="progress-fill signal-bar" id="signalBar"></div>
+                </div>
+
+                <p>Excellent</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">⬇️</div>
+
+                <h3>Download Speed</h3>
+
+                <div class="value">
+                    <span id="download">120</span>
+                    <small>Mbps</small>
+                </div>
+
+                <p>Download performance</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">⬆️</div>
+
+                <h3>Upload Speed</h3>
+
+                <div class="value">
+                    <span id="upload">45</span>
+                    <small>Mbps</small>
+                </div>
+
+                <p>Upload performance</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">⏱️</div>
+
+                <h3>Ping / Latency</h3>
+
+                <div class="value">
+                    <span id="ping">24</span>
+                    <small>ms</small>
+                </div>
+
+                <p>Network response time</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Network Quality -->
+
+        <section class="quality-section">
+
+            <h2>Network Quality</h2>
+
+            <div class="quality-container">
+
+                <div class="quality-circle" id="qualityCircle">
+                    <span id="qualityScore">92</span>
+                    <small>/100</small>
+                </div>
+
+                <div class="quality-text">
+
+                    <h2 id="qualityTitle">
+                        Excellent
+                    </h2>
+
+                    <p id="qualityDescription">
+                        Your Wi-Fi network is performing very well.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Signal Chart -->
+
+        <section class="chart-section">
+
+            <h2>Signal Strength History</h2>
+
+            <div class="chart">
+
+                <div class="bar" style="height: 60%;">
+                    <span>60%</span>
+                </div>
+
+                <div class="bar" style="height: 75%;">
+                    <span>75%</span>
+                </div>
+
+                <div class="bar" style="height: 68%;">
+                    <span>68%</span>
+                </div>
+
+                <div class="bar" style="height: 82%;">
+                    <span>82%</span>
+                </div>
+
+                <div class="bar" style="height: 90%;">
+                    <span>90%</span>
+                </div>
+
+                <div class="bar" style="height: 85%;">
+                    <span>85%</span>
+                </div>
+
+                <div class="bar" style="height: 88%;">
+                    <span>88%</span>
+                </div>
+
+            </div>
+
+            <div class="chart-labels">
+                <span>10 AM</span>
+                <span>11 AM</span>
+                <span>12 PM</span>
+                <span>1 PM</span>
+                <span>2 PM</span>
+                <span>3 PM</span>
+                <span>4 PM</span>
+            </div>
+
+        </section>
+
+
+        <!-- Connected Devices -->
+
+        <section class="devices-section">
+
+            <h2>Connected Devices</h2>
+
+            <div class="devices">
+
+                <div class="device">
+                    <span>💻</span>
+                    <div>
+                        <strong>Laptop</strong>
+                        <p>192.168.1.101</p>
+                    </div>
+                    <span class="online">Online</span>
+                </div>
+
+                <div class="device">
+                    <span>📱</span>
+                    <div>
+                        <strong>Mobile</strong>
+                        <p>192.168.1.102</p>
+                    </div>
+                    <span class="online">Online</span>
+                </div>
+
+                <div class="device">
+                    <span>🖥️</span>
+                    <div>
+                        <strong>Desktop</strong>
+                        <p>192.168.1.103</p>
+                    </div>
+                    <span class="online">Online</span>
+                </div>
+
+                <div class="device">
+                    <span>📺</span>
+                    <div>
+                        <strong>Smart TV</strong>
+                        <p>192.168.1.104</p>
+                    </div>
+                    <span class="offline">Offline</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Recommendations -->
+
+        <section class="recommendation">
+
+            <h2>💡 Network Recommendations</h2>
+
+            <ul id="recommendations">
+
+                <li>✅ Signal strength is excellent.</li>
+                <li>✅ Network latency is low.</li>
+                <li>✅ Download speed is suitable for streaming.</li>
+                <li>⚡ Keep the router in an open location for better coverage.</li>
+
+            </ul>
+
+        </section>
+
+
+        <footer>
+            <p>Wi-Fi Network Performance Analyzer | Computer Networks Project</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
